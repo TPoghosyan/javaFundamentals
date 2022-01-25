@@ -16,7 +16,7 @@ public class ReservOrder {
         }
 
         for (int i = 0; i < inputDataCount; i++) {
-            System.out.print((inputData[inputDataCount-i-1]) + "  ");
+            System.out.print((inputData[inputDataCount - i - 1]) + "  ");
         }
 
 
