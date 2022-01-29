@@ -1,3 +1,4 @@
+//Вывести числа в порядке возрастания (убывания) значений их длины.
 package homeWork;
 
 import java.util.Arrays;
