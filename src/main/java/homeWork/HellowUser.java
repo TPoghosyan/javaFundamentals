@@ -2,7 +2,7 @@ package homeWork;
 
 import java.util.Scanner;
 
-public class hellowUser {
+public class HellowUser {
 
     public static String userName;
 
