@@ -5,7 +5,7 @@ public class IncreaseUsingSort {
     public static void main(String[] args) {
 
 
-        int[][] numberss = new int[][]{{59, 9, 999998, 9, 77999, -999, 55, -8899}, {0, 0, 0, 0, 0, 0, 0, 0}};
+        int[][] numberss = new int[][]{{59, 9, 999998, 0, 77999, -999, 55, -8899}, {0, 0, 0, 0, 0, 0, 0, 0}};
         for (int i = 0; i < 8; i++) {
             numberss[1][i] = digitCount(numberss[0][i]);
         }
