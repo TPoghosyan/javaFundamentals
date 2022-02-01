@@ -11,11 +11,16 @@ public class HellowUser {
         System.out.print("Please type your name here     \"");
         userName = scanner.nextLine();
         boolean x = checkFirstUpper(userName);
-        while (checkDigits(userName) || !checkFirstUpper(userName)) {
+        while (checkDigits(userName) || !checkFirstUpper(userName) || checkLength(userName)) {
             if (checkDigits(userName)) {
-                System.out.println("name may note contain digits ");
-            }else if (!checkFirstUpper(userName)) {
-                System.out.print("the name should start with Uppercase");
+                System.out.println("name cannot contain numbers ");
+                System.out.println("please try again ");
+            } else if (!checkFirstUpper(userName)) {
+                System.out.print("name must start with a capital letter");
+                System.out.println("please try again ");
+            }else if (checkLength(userName)){
+                System.out.println("Name must contain more than 2 letters");
+                System.out.println("please try again ");
             }
             userName = scanner.nextLine();
         }
@@ -24,7 +29,6 @@ public class HellowUser {
 
     static boolean checkDigits(String sample) {
         char[] chars = sample.toCharArray();
-        StringBuilder sb = new StringBuilder();
         boolean digits = false;
         for (char c : chars) {
             if (Character.isDigit(c)) {
@@ -36,12 +40,20 @@ public class HellowUser {
 
     static boolean checkFirstUpper(String sample) {
         char[] chars = sample.toCharArray();
-        StringBuilder sb = new StringBuilder();
         boolean upperCase = false;
         if (Character.isUpperCase(chars[0])) {
             upperCase = true;
         }
         return upperCase;
+    }
+
+    static boolean checkLength(String sample) {
+        char[] chars = sample.toCharArray();
+         boolean length = false;
+        if (chars.length < 3) {
+            length = true;
+        }
+        return length;
     }
 
 }
